@@ -11,8 +11,8 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Effective Mobile TT"
 include(":app")
-include(":domain")
 include(":data")
+include(":domain")
