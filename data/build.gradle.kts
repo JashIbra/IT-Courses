@@ -21,6 +21,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "BASE_API_URL", "\"https://stepik.org/api/\"")
+        }
+
+        debug {
+            buildConfigField("String", "BASE_API_URL", "\"https://stepik.org/api/\"")
         }
     }
     compileOptions {
@@ -30,9 +35,15 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
+
+    implementation(project(":domain"))
 
     // Android
     implementation(libs.androidx.core.ktx)
@@ -47,4 +58,5 @@ dependencies {
     // Util
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.koin.android)
 }
