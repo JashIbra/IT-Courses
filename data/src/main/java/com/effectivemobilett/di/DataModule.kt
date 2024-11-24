@@ -10,6 +10,6 @@ import org.koin.dsl.module
 fun dataModule() = module {
 
     single { getRetrofit().create(CoursesApi::class.java) }
-    single<MainScreenRepository> { MainScreenRepositoryImpl(coursesApi = get()) }
-    singleOf(::MainScreenRepositoryImpl) bind MainScreenRepository::class
+    single<com.effectivemobilett.mainscreen.repository.MainScreenRepository> { MainScreenRepositoryImpl(coursesApi = get()) }
+    singleOf(::MainScreenRepositoryImpl) bind com.effectivemobilett.mainscreen.repository.MainScreenRepository::class
 }

@@ -58,5 +58,10 @@ dependencies {
     // Util
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.joda.time)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // Koin
     implementation(libs.koin.android)
 }
