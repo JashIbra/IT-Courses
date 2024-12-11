@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.recyclerview)
 
     // Tests
     testImplementation(libs.junit)
@@ -63,6 +64,9 @@ dependencies {
     // Util
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.collections.immutable)
+    implementation(libs.joda.time)
+    implementation("com.github.Dimezis:BlurView:version-2.0.5")
+
 
     // Glide
     implementation(libs.glide)
