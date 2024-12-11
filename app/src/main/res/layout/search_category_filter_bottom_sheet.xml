@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_background"
+    android:orientation="vertical"
+    tools:context="com.effectivemobilett.presentation.main.searchfilter.SearchCategoryFilterBottomSheet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/item_background"
+            android:elevation="2dp"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="@string/filter_bottom_sheet_title"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/filter_bottom_sheet_apply_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="4dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                android:text="@string/filter_bottom_sheet_apply_button"
+                android:textColor="@android:color/white" />
+        </Toolbar>
+
+        <TextView
+            android:id="@+id/filter_bottom_sheet_mobile_dev_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="@string/filter_bottom_sheet_category_name_mobile"
+            android:textColor="@android:color/white"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:drawableTint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/filter_bottom_sheet_patterns_container_mobile_dev_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/filter_search_request_kotlin_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_kotlin"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/filter_search_request_android_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_android"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/filter_search_request_UIUX_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_UIUX"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/filter_bottom_sheet_difficult_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="@string/filter_bottom_sheet_category_name_difficult"
+            android:textColor="@android:color/white"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:drawableTint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/filter_bottom_sheet_patterns_container_difficult_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/filter_search_request_beginner_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_beginner"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/filter_search_request_intermediate_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_intermediate"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/filter_search_request_advanced_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_advanced"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/filter_bottom_sheet_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="@string/filter_bottom_sheet_category_name_cost"
+            android:textColor="@android:color/white"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:drawableTint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/filter_bottom_sheet_patterns_container_cost_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/filter_search_request_free_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_free"
+                android:textColor="@color/white" />
+
+            <CheckBox
+                android:id="@+id/filter_search_request_paid_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/filter_search_pattern_paid"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
