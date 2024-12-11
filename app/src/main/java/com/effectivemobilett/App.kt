@@ -1,7 +1,7 @@
 package com.effectivemobilett
 
 import android.app.Application
-import com.effectivemobilett.di.allModules
+import com.effectivemobilett.presentation.appcompat.di.allModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

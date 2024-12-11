@@ -2,12 +2,12 @@ package com.effectivemobilett.mainscreen.model
 
 import com.google.gson.annotations.SerializedName
 
-data class GradeNetModel(
+data class SummaryGradeNetModel(
     @SerializedName("average") val average: Double,
     @SerializedName("count") val countOfReviews: Int
 )
 
-fun GradeNetModel.toDomain() = com.effectivemobilett.mainscreen.model.GradeModel(
+fun SummaryGradeNetModel.toDomain() = SummaryGradeModel(
     average = average,
     countOfReviews = countOfReviews
 )

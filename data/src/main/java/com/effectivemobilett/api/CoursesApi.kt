@@ -3,7 +3,7 @@ package com.effectivemobilett.api
 import com.effectivemobilett.network.CatalogBlockResponse
 import com.effectivemobilett.network.CoursesListResponse
 import com.effectivemobilett.network.CursesResponse
-import com.effectivemobilett.network.GradeResponse
+import com.effectivemobilett.network.SummaryGradeResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -22,7 +22,7 @@ interface CoursesApi {
     @GET("course-review-summaries/{id}")
     suspend fun getCourseGradeById(
         @Path("id") id: Long
-    ): GradeResponse
+    ): SummaryGradeResponse
 
     @GET("course-lists/{id}")
     suspend fun getTargetedCourses(

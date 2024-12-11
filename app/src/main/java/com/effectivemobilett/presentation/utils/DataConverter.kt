@@ -1,4 +1,4 @@
-package com.effectivemobilett.utils
+package com.effectivemobilett.presentation.utils
 
 import org.joda.time.format.DateTimeFormat
 import java.util.Locale

@@ -5,7 +5,7 @@ data class CourseModel(
     val title: String,
     val summary: String,
     val language: String,
-    val gradeId: Long,
+    val summaryGradeId: Long,
     val publishedDate: String,
     val targetAudience: String,
     val price: String? = null,

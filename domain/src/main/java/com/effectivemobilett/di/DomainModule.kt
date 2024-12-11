@@ -1,9 +1,11 @@
 package com.effectivemobilett.di
 
+import com.effectivemobilett.mainscreen.usecases.GetBaseCourseByIdUseCase
+import com.effectivemobilett.mainscreen.usecases.GetCourseIdsByCategoryId
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
-import com.effectivemobilett.mainscreen.usecases.GetCoursesUseCase
 
 fun domainModule() = module {
-    factoryOf(::GetCoursesUseCase)
+    factoryOf(::GetCourseIdsByCategoryId)
+    factoryOf(::GetBaseCourseByIdUseCase)
 }

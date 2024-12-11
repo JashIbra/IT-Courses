@@ -2,7 +2,7 @@ package com.effectivemobilett.mainscreen.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CourseNetModel (
+data class CourseNetModel(
     @SerializedName("id") val id: Long,
     @SerializedName("title") val title: String,
     @SerializedName("summary") val summary: String,
@@ -16,12 +16,12 @@ data class CourseNetModel (
     @SerializedName("certificate_cover_org") val certificateCoverUrl: String? = null,
 )
 
-fun CourseNetModel.toDomain() = com.effectivemobilett.mainscreen.model.CourseModel(
+fun CourseNetModel.toDomain() = CourseModel(
     id = id,
     title = title,
     summary = summary,
     language = language,
-    gradeId = gradeId,
+    summaryGradeId = gradeId,
     publishedDate = publishedDate,
     targetAudience = targetAudience,
     price = price,
@@ -29,5 +29,3 @@ fun CourseNetModel.toDomain() = com.effectivemobilett.mainscreen.model.CourseMod
     difficulty = difficulty,
     certificateCoverUrl = certificateCoverUrl
 )
-
-//fun List<CourseNetModel>.toDomain() = map(CourseNetModel::toDomain)
