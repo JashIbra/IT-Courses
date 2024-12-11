@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_background"
+    android:paddingHorizontal="16dp"
+    tools:context="com.effectivemobilett.presentation.main.MainFragment">
+
+    <EditText
+        android:id="@+id/main_screen_search_field_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/transparent_background_round_12dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="18dp"
+        android:hint="@string/main_screen_search_field_hint"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/main_screen_input_text"
+        android:textColorHint="@color/item_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/main_chose_search_filter_image_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/main_chose_search_filter_image_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/shape_circle2"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/main_screen_search_field_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_screen_search_field_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/main_screen_search_field_edit_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/main_sort_by_menu_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@android:color/transparent"
+        app:endIconDrawable="@drawable/ic_filter_arrows"
+        app:endIconTint="@color/item_text_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_screen_search_field_edit_text">
+
+        <AutoCompleteTextView
+            android:id="@+id/main_sort_by_menu_text_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:inputType="none"
+            android:text="@string/main_screen_sort_default"
+            android:textColor="@color/item_text_button" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_courses_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_sort_by_menu_container"
+        tools:listitem="@layout/item_course" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
