@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="brand_athens_gray">#F2F2F3</color>
+    <color name="brand_trout">#4D555E</color>
+    <color name="brand_dark_gray">#24252A</color>
+    <color name="brand_light_gray">#32333A</color>
+    <color name="brand_malachite">#12B956</color>
+    <color name="brand_bombay">#B4B4B7</color>
+    <color name="brand_glass">#32333A4D</color>
+    <color name="brand_cod_gray">#151515</color>
+
+    <color name="bottom_nav_background">@color/brand_dark_gray</color>
+    <color name="bottom_nav_text">@color/brand_athens_gray</color>
+    <color name="bottom_nav_item">@color/brand_athens_gray</color>
+    <color name="bottom_nav_item_selected">@color/brand_malachite</color>
+    <color name="bottom_nav_select_indicator">@color/brand_light_gray</color>
+
+    <color name="item_background">@color/brand_dark_gray</color>
+    <color name="item_text_title">@color/brand_athens_gray</color>
+    <color name="item_text_secondary">@color/brand_bombay</color>
+    <color name="item_transparent_background">@color/brand_glass</color>
+    <color name="item_text_button">@color/brand_malachite</color>
+
+    <color name="main_screen_background">@color/brand_cod_gray</color>
+    <color name="main_screen_input_text">@color/brand_athens_gray</color>
+
+    <color name="sort_menu_text_item">@color/brand_malachite</color>
+
 </resources>

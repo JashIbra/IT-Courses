@@ -5,29 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.effectivemobilett.presentation.MainActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+    tools:context="com.effectivemobilett.presentation.appcompat.MainActivity">
 
     <include layout="@layout/content_main" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemBackground="@color/bottom_nav_background"
+        app:itemIconTint="@color/bottom_nav_text_color"
+        app:itemTextColor="@color/bottom_nav_text_color"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

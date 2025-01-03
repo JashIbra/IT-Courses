@@ -25,11 +25,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_API_URL", "\"https://stepik.org/api/\"")
-        }
-
-        debug {
-            buildConfigField("String", "BASE_API_URL", "\"https://stepik.org/api/\"")
         }
     }
     compileOptions {
@@ -41,11 +36,13 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        buildConfig = true
     }
 }
 
 dependencies {
+
+    implementation(project(":data"))
+    implementation(project(":domain"))
 
     // Android
     implementation(libs.androidx.core.ktx)
@@ -54,6 +51,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.recyclerview)
 
     // Tests
     testImplementation(libs.junit)
@@ -61,11 +59,17 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Koin
-    implementation(project.dependencies.platform(libs.koin.bom))
-    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+
+    // Util
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.collections.immutable)
+    implementation(libs.joda.time)
+    implementation("com.github.Dimezis:BlurView:version-2.0.5")
+
 
     // Glide
-    implementation (libs.glide)
-    kapt (libs.compiler)
-    implementation (libs.glide.transformations)
+    implementation(libs.glide)
+    kapt(libs.compiler)
+    implementation(libs.glide.transformations)
 }
